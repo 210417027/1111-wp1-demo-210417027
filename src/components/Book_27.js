@@ -11,4 +11,4 @@ const Book_27 = ({img, title, author}) => {
     )
   }
 
-  export default App_27;
+  export default Book_27;
