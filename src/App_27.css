@@ -34,6 +34,18 @@ body {
   color:#617d98;
 }
 
+/* .book img {
+
+  width: 100%;
+
+  height: 300px;
+
+  object-fit: cover;
+
+  margin: 0 auto;
+
+} */
+
 @media screen and (min-width: 768px) {
   .booklist {
     grid-template-columns: repeat(3, 1fr);
