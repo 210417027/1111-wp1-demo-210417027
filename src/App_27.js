@@ -1,11 +1,16 @@
+import { useState } from 'react';
 import './App_27.css';
+import Menu_27 from './components/Menu_27';
 
-
+import items from './data';
 
 
 const App_27 = () => {
+  const [menuItems, setMenuItems] = useState(items);
+
+  console.log('menuitems', menuItems)
   return (
-    <section classNameNe="menu">
+    <section className="menu">
       {/* title  */}
       <div className="title">
         <h2>our menu</h2>
@@ -22,57 +27,7 @@ const App_27 = () => {
       </div>
       </div>
       {/* menu items */}
-      <div className="section-center">
-      <article className="menu-item">
-          <img
-            src="/images/item-1.jpeg"
-            alt="buttermilk"
-            pancakes=""
-            class="photo"
-          />
-          <div class="item-info">
-            <header>
-              <h4>buttermilk pancakes</h4>
-              <h4 class="price">$15.99</h4>
-            </header>
-            <p class="item-text">
-              I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock
-              freegan copper mug whatever cold-pressed
-            </p>
-          </div>
-        </article>
-        <article class="menu-item">
-          <img src="/images/item-2.jpeg" alt="diner" double="" className="photo" />
-          <div class="item-info">
-            <header>
-              <h4>diner double</h4>
-              <h4 class="price">$13.99</h4>
-            </header>
-            <p class="item-text">
-              vaporware iPhone mumblecore selvage raw denim slow-carb leggings
-              gochujang helvetica man braid jianbing. Marfa thundercats
-            </p>
-          </div>
-        </article>
-        <article className="menu-item">
-          <img
-            src="/images/item-3.jpeg"
-            alt="godzilla"
-            milkshake=""
-            className="photo"
-          />
-          <div className="item-info">
-            <header>
-              <h4>godzilla milkshake</h4>
-              <h4 className="price">$6.99</h4>
-            </header>
-            <p className="item-text">
-              ombucha chillwave fanny pack 3 wolf moon street art photo booth
-              before they sold out organic viral.
-            </p>
-          </div>
-        </article>
-      </div>
+      <Menu_27 items ={menuItems} />
       </section>
   );
 };
