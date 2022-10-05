@@ -1,12 +1,12 @@
 import React from 'react';
-import T14_xx from './tutorial/1-useState/T14_27-useState-object';
+import T21_xx from './tutorial/2-useEffect/T21_27-useEffect-basics';
 
 
 const App_xx = () => {
   return (
     <div className='container'>
-      <h2>Tutorial 14 - 210417027</h2>
-      <T14_xx />
+      <h2>Tutorial 21_27</h2>
+      <T21_xx />
     </div>
   );
 };
