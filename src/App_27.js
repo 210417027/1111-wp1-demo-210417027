@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import data from './blogData_27.js'
+import BlogList_27 from './components/BlogList_27.js';
 
 const App_27 = () => {
   const [blogs, setBlogs] = useState(data);
@@ -16,29 +17,7 @@ const App_27 = () => {
         <button type="button" className="filter-btn" data-id="travel"> travel </button></div>
 
       <div className="blogs-center">
-        { blogs.map( (blog) => {
-          const {id, img, title, desc, category} = blog;
-          return (
-            <article className="blog">
-          <img
-            src={img}
-            alt="Coffee photo"
-            className="img blog-img"
-          />
-          <div className="blog-content">
-            <span>{category}</span>
-            <h3>{title}</h3>
-            <p>{desc}</p>
-            <div className="item-control">
-              <a href="#">read more</a>
-              <div className='btn-container'>
-                <button type='button' className='delete-btn'> delete </button>
-              </div>
-            </div>
-          </div>
-        </article>
-          )
-        })}
+        <BlogList_27 key={1} blogs={blogs}/>
         </div>
     </section>
 
