@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Blog_27 = ({id, img, title, desc, category}) => {
+const Blog_27 = ({id, img, title, desc, category, removeItem}) => {
   return (
     <div>
       <article className="blog">
@@ -16,7 +16,7 @@ const Blog_27 = ({id, img, title, desc, category}) => {
             <div className="item-control">
               <a href="#">read more</a>
               <div className='btn-container'>
-                <button type='button' className='delete-btn'> delete </button>
+                <button type='button' className='delete-btn' onClick={() => removeItem(id)}> delete </button>
               </div>
             </div>
           </div>

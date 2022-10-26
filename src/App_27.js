@@ -5,6 +5,12 @@ import BlogList_27 from './components/BlogList_27.js';
 const App_27 = () => {
   const [blogs, setBlogs] = useState(data);
   console.log('blogs', blogs);
+
+  const removeItem = (id) => {
+    setBlogs(blogs.filter( (blog) => blog.id !==id));
+  }
+
+
   return (
     <>
           <section className="blogs">
@@ -17,7 +23,7 @@ const App_27 = () => {
         <button type="button" className="filter-btn" data-id="travel"> travel </button></div>
 
       <div className="blogs-center">
-        <BlogList_27 key={1} blogs={blogs}/>
+        <BlogList_27 key={1} blogs={blogs} removeItem={removeItem}/>
         </div>
     </section>
 
