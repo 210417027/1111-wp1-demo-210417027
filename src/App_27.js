@@ -10,6 +10,9 @@ const App_27 = () => {
     setBlogs(blogs.filter( (blog) => blog.id !==id));
   }
 
+  const clearBlogs = () => {
+    setBlogs([]);
+  }
 
   return (
     <>
@@ -25,6 +28,9 @@ const App_27 = () => {
       <div className="blogs-center">
         <BlogList_27 key={1} blogs={blogs} removeItem={removeItem}/>
         </div>
+        <button class='clear-btn' onClick={clearBlogs}>
+        clear all blogs
+      </button>
     </section>
 
     </>
