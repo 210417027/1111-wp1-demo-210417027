@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import './index.css';
-import App_27 from './App_27';
+import App_27 from './App_27.js';
 
 // 👇️ IMPORTANT: use correct ID of your root element
 // this is the ID of the div in your index.html file
