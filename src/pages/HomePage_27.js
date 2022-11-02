@@ -1,8 +1,9 @@
-const Home_xx = () => {
-  return (
+const HomePage_27 = () => {
+  return (  
     <section className='section'>
       <h2>Home Page</h2>
     </section>
+    
   );
 };
-export default Home_xx;
+export default HomePage_27;
