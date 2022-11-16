@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+
 const Error_27 = () => {
   return (
     <section className='section'>
