@@ -1,4 +1,4 @@
-const Product_27 = ({id ,img ,name ,price ,category}) => {
+const Product_27 = ({img ,name ,price}) => {
   return (
     <>
     <div className="single-product">
