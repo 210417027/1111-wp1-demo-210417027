@@ -23,8 +23,8 @@ const P2Page_27 = () => {
         </div>
       <div className="products-right">
         <div className="products-container">
-          { midterm_data_27.map((midterm_data_27) => {
-            const {id, img, category, name ,price} = midterm_data_27;
+          { products.map((product) => {
+            const {id, img, category, name ,price} = product;
             return (
               <div key={id} className="single-product">
               <img src={img} className="single-product-img img" alt="albany table" />
