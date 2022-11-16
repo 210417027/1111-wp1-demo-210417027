@@ -2,87 +2,87 @@ const midterm_data_27 = [
     {
         id: 1,
         img: "./images/product-1.jpg",
-        category : "Ikea",
+        category : "ikea",
         name : "High-Back Bench",
-        price : 9.99    
+        price : "$9.99"
     },
     {
         id: 2,
         img: "./images/product-2.jpg",
-        category : "Marcos",
+        category : "marcos",
         name : "albany table",
-        price : 79.99
+        price : "$79.99"
     },
     {
         id: 3,
         img: "./images/product-3.jpg",
-        category : "Caressa",
+        category : "caressa",
         name : "Accent Chair",
-        price : 25.99
+        price : "$25.99"
     },
     {
         id: 4,
         img: "./images/product-4.jpg",
-        category : "Ikea",
+        category : "ikea",
         name : "Wooden Table",
-        price : 45.99
+        price : "$45.99"
     },
     {
         id: 5,
         img: "./images/product-5.jpg",
-        category : "Marcos",
+        category : "marcos",
         name : "Dining Table",
-        price : 6.99   
+        price : "$6.99"
     },
     {
         id: 6,
         img: "./images/product-6.jpg",
-        category : "Caressa",
+        category : "caressa",
         name : "Sofa Set",
-        price : 69.99
+        price : "$69.99"
     },
     {
         id: 7,
         img: "./images/product-7.jpg",
-        category : "Ikea",
+        category : "ikea",
         name : "Modern Bookshelf",
-        price : 8.99    
+        price : "$8.99"
     },
     {
         id: 8,
         img: "./images/product-8.jpg",
-        category : "Marcos",
+        category : "marcos",
         name : "Emperor Bed",
-        price : 21.99
+        price : "$21.99"
     },
     {
         id: 9,
         img: "./images/product-9.jpg",
-        category : "Caressa",
+        category : "caressa",
         name : "Utopia Sofa",
-        price : 39.95
+        price : "$39.95"
     },
     {
         id: 10,
         img: "./images/product-10.jpg",
-        category : "Ikea",
+        category : "ikea",
         name : "Entertainment Center",
-        price : 29.98
+        price : "$29.98"
     },
     {
         id: 11,
         img: "./images/product-11.jpg",
-        category : "Marcos",
+        category : "marcos",
         name : "Albany Sectional",
-        price : 10.99
+        price : "$10.99"
     },
     {
         id: 12,
         img: "./images/product-12.jpg",
-        category : "Caressa",
+        category : "caressa",
         name : "Leather Sofa",
-        price : 9.99
-        },
+        price : "$9.99"
+    },
 ];
 
 export default midterm_data_27;
