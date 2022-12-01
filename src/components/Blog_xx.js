@@ -1,11 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React from 'react'
 
-const PersonContext = React.createContext();
-
-
-const Blog_xx = ({id, img, title, desc, category}) => {
-  const { removeItem } = useContext(PersonContext);
-
+const Blog_xx = ({id, img, title, desc, category, removeItem}) => {
   return (
     <article className="blog">
     <img

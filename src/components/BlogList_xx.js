@@ -1,12 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React from 'react'
 import Blog_xx from './Blog_xx';
 
-
-const PersonContext = React.createContext();
-
 const BlogList_xx = ({blogs, removeItem})  => {
-  const mainData = useContext(PersonContext);
-  console.log('MainData', mainData)
   return (
     <div className="blogs-center">
         { blogs.map( (blog) => {
