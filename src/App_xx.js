@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import data from './blogData_xx';
 import BlogList_xx from './components/BlogList_xx';
 import Alert_xx from './components/Alert_xx';
+
+const BlogContext = React.createContext();
+
 
 const App_xx = () => {
   const [blogs, setBlogs] = useState(data);
@@ -9,18 +12,18 @@ const App_xx = () => {
     show: false,
     msg: '',
     type: '',
-  });
+  });  
+
+  const removeItem = (id) => {
+    showAlert(true, 'blog removed', 'danger');
+    setBlogs(blogs.filter( (blog) => blog.id !== id));
+  }
 
   const showAlert = (show = false, msg = '', type = '') => {
     setAlert({ show, msg, type });
   };
 
   console.log('blogs', blogs);
-
-  const removeItem = (id) => {
-    showAlert(true, 'blog removed', 'danger');
-    setBlogs(blogs.filter( (blog) => blog.id !== id));
-  }
 
   const clearBlogs = () => {
     showAlert(true, 'empty all blogs', 'danger');
@@ -37,7 +40,7 @@ const App_xx = () => {
   }
 
   return (
-    <>
+    <BlogContext.Provider value={ {blogs, alert, removeItem , clearBlogs, filterItems, showAlert}}>
     <section className="blogs">
     {alert.show && <Alert_xx {...alert} removeAlert={showAlert} />}
       <div className="section-title">
@@ -55,8 +58,14 @@ const App_xx = () => {
         clear all blogs
       </button>
     </section>
-    </>
+    </BlogContext.Provider>
   );
 };
 
-export default App_xx;
+
+
+const useBlogContext = () => {
+  return useContext(BlogContext);
+};
+
+export { App_xx, useBlogContext};
