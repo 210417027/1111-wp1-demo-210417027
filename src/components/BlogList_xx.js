@@ -1,10 +1,10 @@
 import React from 'react'
 import Blog_xx from './Blog_xx';
-import { useBlogContext } from '../App_xx';
+import { useBlogContext_xx } from "../BlogContext_xx";
 
 
 const BlogList_xx = ()  => {
-  const {blogs} = useBlogContext();
+  const {blogs} = useBlogContext_xx();
 
   return (
     <div className="blogs-center">
