@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import CartItem from './CartItem_27';
-import data from '../data';
+// import data from '../data';
+
+import { useGlobalContext_xx } from '../Context_27';
 
 const CartContainer = () => {
-  const [cart, setCart] = useState(data);
-  const [total, setTotal] = useState(0);
-  const [amount, setAmount] = useState(0);
+  // const [cart, setCart] = useState(data);
+  // const [total, setTotal] = useState(0);
+  // const [amount, setAmount] = useState(0);
+  const {cart, total, amount} = useGlobalContext_xx();
   if (cart.length === 0) {
     return (
       <section className='cart'>
