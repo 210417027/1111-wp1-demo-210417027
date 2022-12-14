@@ -1,29 +1,26 @@
-import { useState } from 'react';
-import Category_27 from './components/Category_27';
-import './App_27.css';
-// import Menu_27 from './components/Menu_27';
+import React from 'react';
 
-import items from './data';
-import { useMenuContext_xx } from "./MenuContext_xx";
+import { useGlobalContext_xx } from './Context_27';
 
-
-const allCategories = ['all', 'breakfast', 'lunch', 'shakes', '27'];
+// components
+import Navbar_27 from './components/Navbar_27';
+import CartContainer_27 from './components/CartContainer_27';
+// items
 
 const App_27 = () => {
-  const { menuItems, categories, filterItems } =
-  useMenuContext_xx();
+  const { loading, cart } = useGlobalContext_xx();
+  // if (loading) {
+  //   return (
+  //     <div className='loading'>
+  //       <h1>Loading...</h1>
+  //     </div>
+  //   );
+  // }
   return (
-    <section className="menu">
-      {/* title  */}
-      <div className="title">
-        <h2>our menu -210417027</h2>
-        <div className="underline"></div>
-      </div>
-      {/* filter buttons */}
-      <Category_27 categories={categories}  filterItems={filterItems}/>
-      {/* menu items */}
-      <Menu_27 items ={menuItems} />
-      </section>
+    <main>
+      <Navbar_27 />
+      <CartContainer_27 />
+    </main>
   );
 };
 

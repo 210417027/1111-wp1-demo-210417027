@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
+import './index.css';
 import App_27 from './App_27';
-
-import { AppProvider_27 } from './Context_27';
-
+import { BlogContextProvider_27 } from './BlogContext_27';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppProvider_27>
-    <App_27 />
-    </AppProvider_27>
+    <BlogContextProvider_27>
+      <App_27 />
+    </BlogContextProvider_27>
   </React.StrictMode>
 );
