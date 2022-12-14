@@ -30,7 +30,12 @@ const AppProvider_27 = ({children}) => {
 
   }
 
-  return <AppContext_27.Provider value={{...state, clearCart, increase, removeButton}}>
+  const decrease = (id) => {
+    dispatch({type: 'DECREASE', payload: id});
+
+  }
+
+  return <AppContext_27.Provider value={{...state, clearCart, increase,decrease, removeButton}}>
      {children}  
   </AppContext_27.Provider>
 };

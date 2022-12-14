@@ -2,7 +2,7 @@ import React from 'react';
 import { useGlobalContext_xx } from '../Context_27';
 
 const CartItem = ({ id, img, title, price, amount }) => {
-  const {increase, removeButton} = useGlobalContext_xx();
+  const {increase,decrease, removeButton} = useGlobalContext_xx();
   return (
     <article className='cart-item'>
       <img src={img} alt={title} />
@@ -10,7 +10,7 @@ const CartItem = ({ id, img, title, price, amount }) => {
         <h4>{title}</h4>
         <h4 className='item-price'>${price}</h4>
         {/* remove button */}
-        <button className='remove-btn' onClick={removeButton}>
+        <button className='remove-btn' onClick={() => removeButton}>
           remove
         </button>
       </div>
@@ -24,7 +24,7 @@ const CartItem = ({ id, img, title, price, amount }) => {
         {/* amount */}
         <p className='amount'>{amount}</p>
         {/* decrease amount */}
-        <button className='amount-btn'>
+        <button className='amount-btn' onClick={() => decrease(id)}>
           <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'>
             <path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' />
           </svg>
