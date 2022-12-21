@@ -1,15 +1,13 @@
 import React, { useState, useContext, useReducer, useEffect, Children } from 'react';
 import Reducer_27 from './Reducer_27';
 
-// import cartItems from './data';
-
-const url = 'https://course-api.com/react-useReducer-cart-project';
+import cartItems from './data';
 
 const AppContext_27 = React.createContext();
 
 const initialState = {
   loading: false,
-  cart: [],
+  cart: cartItems,
   amount: 4,
   total: 123.45
 }
@@ -36,18 +34,6 @@ const AppProvider_27 = ({children}) => {
     dispatch({type: 'DECREASE', payload: id});
 
   }
-
-  const fetchData = async () => {
-    dispatch({ type: 'LOADING'});
-    const response = await fetch(url);
-    const cart = await response.json();
-    console.log('cart',cart);
-    dispatch( { type: 'DISPLAY_ITEMS', payload: cart});
-  }
-
-  useEffect(()=> {
-    fetchData();
-  },[]);
 
   return <AppContext_27.Provider value={{...state, clearCart, increase,decrease, removeButton}}>
      {children}  

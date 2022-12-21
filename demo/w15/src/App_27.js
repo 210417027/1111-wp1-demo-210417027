@@ -9,13 +9,13 @@ import CartContainer_27 from './components/CartContainer_27';
 
 const App_27 = () => {
   const { loading, cart } = useGlobalContext_xx();
-  if (loading) {
-    return (
-      <div className='loading'>
-        <h1>Loading...</h1>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className='loading'>
+  //       <h1>Loading...</h1>
+  //     </div>
+  //   );
+  // }
   return (
     <main>
       <Navbar_27 />
