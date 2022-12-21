@@ -2,9 +2,7 @@ const Reducer_xx = (state, action) => {
     if(action.type === 'CLEAR_CART'){
         return {...state, cart: [] , amount: 0, total: 0 }
     }
-    if(action.type === 'CLEAR_BUTTON'){
-        return {...state, amount: 0 ,id:[], img:[],price:0, title:[] }
-    }
+    
     if(action.type === 'INCREASE') {
         let tempCart = state.cart.map((cartItem) => {
             if(cartItem.id === action.payload) {
@@ -46,6 +44,10 @@ const Reducer_xx = (state, action) => {
     }
     if(action.type === 'DISPLAY_ITEMS') {
         return { ...state, cart:action.payload, loading: false}
+    }
+    if(action.type === 'REMOVE'){
+        const filteredCart = state.cart.filter((item) => item.id !==action.payload );
+        return {...state, cart: filteredCart }
     }
 }
 
